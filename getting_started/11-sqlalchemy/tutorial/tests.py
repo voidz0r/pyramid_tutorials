@@ -43,7 +43,7 @@ class WikiFunctionalTests(unittest.TestCase):
         self.session = _initTestingDB()
         self.config = testing.setUp()
         from pyramid.paster import get_app
-        app = get_app('development.ini')
+        app = get_app('../development.ini')
         from webtest import TestApp
         self.testapp = TestApp(app)
 

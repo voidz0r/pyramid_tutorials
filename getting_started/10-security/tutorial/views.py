@@ -110,8 +110,7 @@ class WikiViews(object):
         url = self.request.route_url('wiki_view')
         return HTTPFound(url)
 
-    @view_config(route_name='login', renderer='templates/login.pt')
-    @forbidden_view_config(renderer='templates/login.pt')
+    @forbidden_view_config(route_name='login', renderer='templates/login.pt')
     def login(self):
         request = self.request
         login_url = request.route_url('login')
